@@ -2,8 +2,8 @@
 
 // API que retorna conselhos aleatórios
 
-const h2 = document.getElementById("h2");
-const btn = document.getElementById("btn");
+const h2 = document.querySelector(".content");
+const btn = document.querySelector(".button");
 
 btn.addEventListener("click", show);
 
