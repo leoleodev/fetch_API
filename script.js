@@ -1,11 +1,9 @@
-
-
 // API que retorna conselhos aleatórios
 
-const h2 = document.querySelector(".content");
-const btn = document.querySelector(".button");
+const main = document.querySelector("main");
+const button= document.querySelector("div.button");
 
-btn.addEventListener("click", show);
+button.addEventListener("click", show);
 
 async function show(){
 
@@ -14,18 +12,7 @@ async function show(){
     const advice = await adviceSlipe;
     const adviceJson = await advice.json();
 
-    h2.innerHTML = adviceJson.slip.advice;
+    main.innerHTML = adviceJson.slip.advice;
 
 }
-
-
-// const advice = fetch("https://api.adviceslip.com/advice")
-//         .then((response)=>{
-//             return response.json();
-//         })
-//         .then((json)=>{
-//             console.log(json.slip.advice);
-//         })
-
-//         console.log(advice);
 

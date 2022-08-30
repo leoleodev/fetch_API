@@ -8,6 +8,7 @@
     --background: #101010;
     --screen: #181818;
     --red: #D60404;
+    --redligth: #c72d2d;
     --white: #ffffff;
 }
 
@@ -17,32 +18,51 @@ body{
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    padding: 3rem;
 
     background: var(--background);
 }
 
 h1{
-    margin: 0 0 6rem 0;
+    margin: 0 0 2rem 0;
     color: var(--white);
+
+    text-align: center;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'Catamaran', sans-serif;
+
+    
 }
 
 main{
     height: 40vh;
     width: 60vw;
 
+    padding: 0.75rem;
+
+    text-align: justify;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: var(--screen);
+    color: var(--white);
 
     box-shadow: 0px 0px 20px rgba(214, 4, 4, 0.2);
     border-radius: 10px;
 
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .button{
     position: relative;
-    margin: 6rem 0 0 0;
+    margin: 2rem 0 0 0;
 
     height: 4rem;
     width: 13rem;
@@ -56,6 +76,23 @@ main{
     
     background: var(--red);
     color: var(--white);
+
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Catamaran', sans-serif;
+
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.button:hover{
+    cursor: pointer;
+    background: var(--redligth);
 }
 .line{
     width: 100%;
@@ -66,4 +103,31 @@ main{
     bottom: 0;
 
     border-radius: 0 0 10px 10px;
+}
+
+/* Responsividade */
+
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    
+}
+
+@media(max-width: 720px){
+    html{
+        font-size: 87.5%;
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+
+    main{
+        width: 80vw;
+    }
 }
